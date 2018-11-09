@@ -26,7 +26,7 @@
       <!-- 'post' is a safe method -->
       <form action="includes/login.inc.php" method="post">
         <input id="user" type="text" name="mailuid" placeholder="Username/Email">
-        <input id="pwd" type="password" name="pwd" placeholder="Password">
+        <input id="pwd" type="password" name="pwd" placeholder="Password" autocomplete="new-password">
         <button type="submit" name="login-submit">Login</button>
       </form>
       <div id="signup">
