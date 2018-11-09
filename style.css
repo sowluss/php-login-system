@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: #ebebeb;
 }
 
 input:-webkit-autofill {
@@ -36,6 +37,12 @@ nav {
   display: inline;
   list-style: none;
   margin-right: 2rem;
+  padding: 5px 10px;
+}
+
+.menu ul li:hover {
+  background: #5e5e5e;
+  transition: all .5s ease-in-out;
 }
 
 .menu ul li a {
@@ -55,14 +62,42 @@ nav {
 
 form input {
   margin-right: 2rem;
+  height: 2rem;
+  background: transparent;
+  outline: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 .form-section button {
   margin-right: 2rem;
+  height: 2rem;
+  background: #5e5e5e;
+  color: #fff;
+  width: 4rem;
+  
+}
+
+.form-section button:hover {
+  background: #797979;
+  cursor: pointer;
+  transition: all .5s ease;
 }
 
 #signup {
   margin-right: 2rem;
+}
+
+#signup a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#signup a:hover {
+  transition: all .2s ease;
+  color: #dddbdb;
 }
 
 #user {
@@ -71,4 +106,79 @@ form input {
 
 #pwd {
   margin-right: .5rem;
+}
+
+main {
+  width: 50%;
+  background: #d5d5d5;
+  margin: 1rem auto;
+  padding: 2rem;
+}
+
+main p {
+  text-align: center;
+}
+
+/* ! Signup Page */
+
+#main-signup {
+  width: 500px;
+}
+
+#main-signup h1 {
+  text-align: center;
+  color: #333333;
+  font-weight: 100;
+}
+
+#main-signup form {
+  text-align: center;
+}
+
+#main-signup form {
+ padding: 1rem;
+
+}
+
+#main-signup input {
+  display: block;
+  /* !horizontal input adjusment */
+  margin: 1rem auto;
+  width: 300px;
+  border: 1px solid #000;
+  color: #000;
+  padding-left: 10px;
+}
+
+#main-signup button {
+  height: 2rem;
+  background: #5e5e5e;
+  color: #fff;
+  width: 4rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+#main-signup button:hover {
+  background: #797979;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+
+
+
+
+
+/* * Media queries */
+
+@media (max-width: 1400px) {
+.menu {
+  flex: 1;
+}
+
+.menu ul li {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
 }
