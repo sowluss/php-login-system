@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+nav img {
+  width: 100px;
+  margin-left: 1rem;
+}
+
+nav {
+  display: flex;
+  background: #333333;
+  height: 100px;
+}
+
+.menu {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+  justify-items: center;
+}
+
+.menu ul li {
+  display: inline;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.menu ul li a {
+  color: beige;
+  text-decoration: none;
+}
+
+.form-section {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+form input {
+  margin-right: 2rem;
+}
+
+.form-section button {
+  margin-right: 2rem;
+}
+
+#signup {
+  margin-right: 2rem;
+}
+
+#user {
+  margin-right: .5rem;
+}
+
+#pwd {
+  margin-right: .5rem;
+}
