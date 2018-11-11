@@ -22,14 +22,29 @@ if (isset($_POST['login-submit'])) {
       $result = mysqli_stmt_get_result($stmt);
       if ($row = mysqli_fetch_assoc($result)) {
         $pwdCheck = password_verify($password, $row['pwdUsers']);
-        // ! 10 Nov finished here
-      } else {
+        if ($pwdCheck == false) {
+          header('Location: ../index.php?error=wrongpwd');
+          exit();
+        }
+        else if ($pwdCheck == true) {
+          session_start();
+          $_SESSION['userId'] = $row['idUsers'];
+          $_SESSION['userUid'] = $row['uidUsers'];
+
+          header('Location: ../index.php?login=success');
+          exit();
+        }
+        else {
+          header('Location: ../index.php?error=wrongpwd');
+          exit();
+        }
+      } 
+      else {
         header('Location: ../index.php?error=nouser');
-        exit();
+        exit(); 
       }
     }
   }
-
 } else {
   header('Location: ../index.php');
   exit();
